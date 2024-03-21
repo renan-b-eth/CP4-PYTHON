@@ -1,0 +1,2 @@
+def Busca():
+    return None
