@@ -1,9 +1,10 @@
 import time
 import random
 import matplotlib.pyplot as plt
+from algoritmos import algoritmos
 #import Ordernacao 
 
-#ord = Ordernacao() # instanciar o objeto
+#ord = algoritmos.Ordernacao() # instanciar o objeto
 
 #Metodo para geracao de uma lista
 
@@ -50,5 +51,12 @@ tempos = {'bubble_sort': tempo_bubbler,
           'quickSort': tempo_quickSort}
 
 print(tempos["bubble_sort"])
+
+def gerar_graficos(tempo):
+    plt.plot(tempos['bubble_sort'])
+    plt.show()
+    return tempo
+
+gerar_graficos(tempos)
 
         
