@@ -60,7 +60,7 @@ def gerar_graficos(tempo):
     plt.plot(tempos['bubble_sort'])
     plt.show()
 
-    return tempo
-
+    return tempo    
+print("oi")
 #gerar_graficos(tempos)
 
