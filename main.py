@@ -1,10 +1,14 @@
 import time
 import random
 import matplotlib.pyplot as plt
-from algoritmos import algoritmos
-#import Ordernacao 
+import algoritmos.testes 
+import algoritmos.algoritmos
+from algoritmos.algoritmos.ordenacao import Ordernacao
+from algoritmos.testes.test_busca import Teste_Busca
 
-#ord = algoritmos.Ordernacao() # instanciar o objeto
+ordenacao = Ordernacao
+teste = Teste_Busca
+
 
 #Metodo para geracao de uma lista
 
@@ -17,17 +21,10 @@ def gerar_dados_testes(lista, tamanho_dados, inicio):
 
 lista2 = []
 
-lista3 = gerar_dados_testes(lista2, 10000, 1)
+lista3 = gerar_dados_testes(lista2, 1000, 1)
 
-print(lista3)
-
-def bubble_sort(lista):
-    n = len(lista)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if lista[j] > lista[j+1]:
-                lista[j], lista[j+1] = lista[j+1], lista[j] ## troca de posição
-    return lista
+#print(lista3)
+#print(ordenacao.bubble_sort(lista3))
 
 
 #metodo para definir tempo_Execucao
@@ -37,26 +34,33 @@ def medir_tempo_execucao(algoritmo, lista):
     fim = time.time()    ### tempo final
     return fim - inicio  ### calcula o tempo total de execução
 
-tempo_bubbler = medir_tempo_execucao(bubble_sort, lista3)
-tempo_selection_sort = 1
-tempo_insertion_sort = 2
-tempo_mergeSort = 3
-tempo_quickSort = 5 
+tempo_bubbler = medir_tempo_execucao(ordenacao.bubble_sort, lista3)
+tempo_selection_sort = medir_tempo_execucao(ordenacao.selection_sort, lista3)
+tempo_insertion_sort = medir_tempo_execucao(ordenacao.insertion_sort, lista3)
+tempo_mergeSort = medir_tempo_execucao(ordenacao.mergeSort, lista3)
+#tempo_quickSort = medir_tempo_execucao(ordenacao.quickSort, lista3)
 
 #criacao do dicionario com os dados
 tempos = {'bubble_sort': tempo_bubbler,
           'selection_sort': tempo_selection_sort,
           'insertion_sort': tempo_insertion_sort,
-          'mergeSort': tempo_mergeSort,
-          'quickSort': tempo_quickSort}
+          'mergeSort': tempo_mergeSort
+          #'quickSort': tempo_quickSort
+          }
 
 print(tempos["bubble_sort"])
+print(tempos["selection_sort"])
+print(tempos["insertion_sort"])
+print(tempos["mergeSort"])
+#print(tempos["quickSort"])
+
+
 
 def gerar_graficos(tempo):
     plt.plot(tempos['bubble_sort'])
     plt.show()
+
     return tempo
 
-gerar_graficos(tempos)
+#gerar_graficos(tempos)
 
-        

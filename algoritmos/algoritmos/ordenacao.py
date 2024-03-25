@@ -9,6 +9,9 @@ class Ordernacao():
                     lista[j], lista[j+1] = lista[j+1], lista[j] ## troca de posição
         return lista
     
+    def oi(self):
+        return print("oi")
+    
     def selection_sort(lista):
         n = len(lista)
         # Percorre a lista.
@@ -35,10 +38,6 @@ class Ordernacao():
             lista[i + 1] = chave
 
         return lista
-    
-    def mergeSort(alist):
-        mergesort(alist, [0] * len(alist), 0, len(alist) - 1)
-
 
     def merge(A, aux, esquerda, meio, direita):
         """
@@ -69,18 +68,19 @@ class Ordernacao():
         meio = (esquerda + direita) // 2
 
         # Ordena a primeira metade do arranjo.
-        mergesort(A, aux, esquerda, meio)
+        Ordernacao.mergesort(A, aux, esquerda, meio)
 
         # Ordena a segunda metade do arranjo.
-        mergesort(A, aux, meio + 1, direita)
+        Ordernacao.mergesort(A, aux, meio + 1, direita)
 
         # Combina as duas metades ordenadas anteriormente.
-        merge(A, aux, esquerda, meio, direita)
+        Ordernacao.merge(A, aux, esquerda, meio, direita)
 
-    def quickSort(alist):
-        quicksort(alist, 0, len(alist) - 1)
+    def mergeSort(alist):
+        Ordernacao.mergesort(alist, [0] * len(alist), 0, len(alist) - 1)
 
-    def dividir(lista, inicio, fim):
+
+    #def dividir(lista, inicio, fim):
         pivo = lista[fim]
         posicao_pivo = inicio
         for i in range(inicio, fim):
@@ -90,9 +90,12 @@ class Ordernacao():
         lista[posicao_pivo], lista[fim] = lista[fim], lista[posicao_pivo]
         return posicao_pivo
 
-    def quicksort(lista, inicio, fim):
+    #def quicksort(lista, inicio, fim):
         if inicio < fim:
-            pivo = dividir(lista, inicio, fim)
-            quicksort(lista, inicio, pivo - 1)
-            quicksort(lista, pivo + 1, fim)
+            pivo = Ordernacao.dividir(lista, inicio, fim)
+            Ordernacao.quicksort(lista, inicio, pivo - 1)
+            Ordernacao.quicksort(lista, pivo + 1, fim)
+        return Ordernacao.quickSort(lista,inicio,fim)
 
+    #def quickSort(alist):
+        return Ordernacao.quicksort(alist, 0, len(alist) - 1)
