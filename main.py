@@ -21,10 +21,14 @@ def gerar_dados_testes(lista, tamanho_dados, inicio):
 
 lista2 = []
 
-lista3 = gerar_dados_testes(lista2, 1000, 1)
+lista3 = gerar_dados_testes(lista2, 10000, 1)
 
 #print(lista3)
 #print(ordenacao.bubble_sort(lista3))
+#print(ordenacao.mergeSort(lista3))
+#print(ordenacao.insertion_sort(lista3))
+#print(ordenacao.selection_sort(lista3))
+
 
 
 #metodo para definir tempo_Execucao
@@ -56,11 +60,22 @@ print(tempos["mergeSort"])
 
 
 
-def gerar_graficos(tempo):
-    plt.plot(tempos['bubble_sort'])
+def gerar_graficos(tempos):
+    x = ["TEMPO BUBBLE", "TEMPO SELECTION", "TEMPO INSERTION", "TEMPO MERGE"]
+    y = [tempos["bubble_sort"], tempos["selection_sort"], tempos["insertion_sort"], tempos["mergeSort"]]
+
+    fig, ax = plt.subplots()
+    bars = ax.bar(x=x, height=y)
+    
+    # Adicionando rótulos de valor nas barras
+    for bar in bars:
+        yval = bar.get_height()
+        yval2 = round(yval,3)
+        plt.text(bar.get_x() + bar.get_width()/2.0, yval, float(yval2), va='bottom') # Alinhamento vertical 'bottom'
+    
+    plt.title("Tempo de execução dos metodos de ordenação")
     plt.show()
+    
+    return bars
 
-    return tempo    
-print("oi")
-#gerar_graficos(tempos)
-
+gerar_graficos(tempos)

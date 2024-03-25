@@ -9,9 +9,6 @@ class Ordernacao():
                     lista[j], lista[j+1] = lista[j+1], lista[j] ## troca de posição
         return lista
     
-    def oi(self):
-        return print("oi")
-    
     def selection_sort(lista):
         n = len(lista)
         # Percorre a lista.
@@ -81,21 +78,21 @@ class Ordernacao():
 
 
     #def dividir(lista, inicio, fim):
-        pivo = lista[fim]
-        posicao_pivo = inicio
-        for i in range(inicio, fim):
-            if lista[i] < pivo:
-                lista[i], lista[posicao_pivo] = lista[posicao_pivo], lista[i]
-                posicao_pivo += 1
-        lista[posicao_pivo], lista[fim] = lista[fim], lista[posicao_pivo]
-        return posicao_pivo
+        #pivo = lista[fim]
+        #posicao_pivo = inicio
+        #for i in range(inicio, fim):
+            #if lista[i] < pivo:
+                #lista[i], lista[posicao_pivo] = lista[posicao_pivo], lista[i]
+                #posicao_pivo += 1
+       # lista[posicao_pivo], lista[fim] = lista[fim], lista[posicao_pivo]
+        #return posicao_pivo
 
     #def quicksort(lista, inicio, fim):
-        if inicio < fim:
-            pivo = Ordernacao.dividir(lista, inicio, fim)
-            Ordernacao.quicksort(lista, inicio, pivo - 1)
-            Ordernacao.quicksort(lista, pivo + 1, fim)
-        return Ordernacao.quickSort(lista,inicio,fim)
+        #if inicio < fim:
+            #pivo = Ordernacao.dividir(lista, inicio, fim)
+            #Ordernacao.quicksort(lista, inicio, pivo - 1)
+            #Ordernacao.quicksort(lista, pivo + 1, fim)
+        #return Ordernacao.quickSort(lista,inicio,fim)
 
     #def quickSort(alist):
-        return Ordernacao.quicksort(alist, 0, len(alist) - 1)
+        #return Ordernacao.quicksort(alist, 0, len(alist) - 1)
