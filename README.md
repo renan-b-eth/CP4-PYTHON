@@ -8,12 +8,12 @@
 
 É uma biblioteca customizada em Python que contém implementações de algoritmos de busca e ordenação. Os teste estão localizados no diretório algoritmos/algoritmos.
 
-## Algoritmos de Busca
+## Algoritmos de Busca (busca.py)
 
 - **Busca Sequencial:** Implementa busca sequencial em uma lista.
 - **Busca Binária:** Implementa busca binária em uma lista ordenada.
 
-## Algoritmos de Ordenação
+## Algoritmos de Ordenação (ordenacao.py)
 
 - **Bubble Sort:** Implementa o algoritmo para ordenação de uma lista.
 - **Selection Sort:** Implementa o algoritmo para ordenação de uma lista.
@@ -25,7 +25,7 @@
 
 A biblioteca inclui testes para garantir o funcionamento correto dos algoritmos. Os testes estão localizados no diretório algoritmos/testes.
 
-### Testes de Ordenação (ordenacao.py)
+### Testes de Ordenação (test_ordenacao.py)
 
 O módulo test_ordenacao.py contém testes para os algoritmos de ordenação:
 
@@ -37,7 +37,7 @@ O módulo test_ordenacao.py contém testes para os algoritmos de ordenação:
 - Vetor com elementos repetidos
 - Vetor com elementos negativos
 
-### Testes de Busca (busca.py)
+### Testes de Busca (test_busca.py)
 
 O módulo test_busca.py contém testes para os algoritmos de busca:
 
