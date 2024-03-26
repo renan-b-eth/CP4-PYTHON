@@ -1,8 +1,8 @@
 # Integrantes
 
-- KEVEN IKE PEREIRA DA SILVA - 553215
-- LUCAS ALCÄNTARA CARVALHO - 95111
-- RENAN BEZERRA DOS SANTOS - 553228
+- Keven Ike Pereira da Silva - 553215
+- Lucas Alcântara Carvalho - 95111
+- Renan Bezerra dos Santos - 553228
 
 # Biblioteca de Algoritmos em Python
 
