@@ -29,7 +29,7 @@ def criarBotao():
    
  
 def quemSomos():
-    messagebox.showinfo("Equipe?", "RENAN BEZERRA DOS SANTOS - 553228\nLucas Alcântara Carvalho - 95111\nKEVEN IKE - ")
+    messagebox.showinfo("Equipe?", "RENAN BEZERRA DOS SANTOS - 553228\nLUCAS ALCÂNTARA CARVALHO - 95111\nKEVEN IKE PEREIRA DA SILVA - 553215")
  
 def acessarDiretorio(diretorio):
    return os.startfile(diretorio)
